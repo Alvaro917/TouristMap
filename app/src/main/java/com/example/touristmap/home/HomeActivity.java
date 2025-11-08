@@ -1,14 +1,14 @@
-package com.example.touristmap;
+package com.example.touristmap.home;
 
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.touristmap.map.MapActivity;
 import com.example.touristmap.databinding.ActivityHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
     private ActivityHomeBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

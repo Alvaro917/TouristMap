@@ -1,4 +1,4 @@
-package com.example.touristmap;
+package com.example.touristmap.auth;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.touristmap.home.HomeActivity;
+import com.example.touristmap.R;
 import com.example.touristmap.databinding.ActivityLoginBinding;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
@@ -13,7 +16,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.OnCompleteListener;
 
 public class LoginActivity extends AppCompatActivity {
-
     private ActivityLoginBinding binding;
     private FirebaseAuth auth;
     private FirebaseAnalytics analytics;
@@ -22,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
     public enum ProviderType {
         BASIC
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Base_Theme_TouristMap);
@@ -44,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         // Setup
         setup();
     }
-
     private void setup() {
         setTitle("Login");
         // Uso de lambdas para OnClickListener (disponible en Java 8+)
@@ -64,18 +64,15 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, new OnCompleteListener<com.google.firebase.auth.AuthResult>() {
                     @Override
                     public void onComplete(Task<com.google.firebase.auth.AuthResult> task) {
-                        setLoading(false); // Ocultar barra de progreso
+                        setLoading(false);
                         if (task.isSuccessful()) {
-                            // Opcional: Log analytics event for success
                             analytics.logEvent("register_success", null);
 
-                            // Uso de operador ternario para replicar el 'elvis operator' (?:)
                             String userEmail = (task.getResult().getUser() != null)
                                     ? task.getResult().getUser().getEmail() : "";
 
                             showHome(userEmail, ProviderType.BASIC);
                         } else {
-                            // Mostrar error específico de Firebase
                             String errorMessage = (task.getException() != null)
                                     ? task.getException().getMessage() : "Error en el registro";
                             showAlert(errorMessage);
@@ -97,10 +94,9 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(Task<com.google.firebase.auth.AuthResult> task) {
                         setLoading(false); // Ocultar barra de progreso
                         if (task.isSuccessful()) {
-                            // Opcional: Log analytics event for success
+
                             analytics.logEvent("login_success", null);
 
-                            // Uso de operador ternario para replicar el 'elvis operator' (?:)
                             String userEmail = (task.getResult().getUser() != null)
                                     ? task.getResult().getUser().getEmail() : "";
 
