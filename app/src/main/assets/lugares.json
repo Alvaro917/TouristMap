@@ -1,0 +1,121 @@
+[
+  {
+    "nombre": "Cerro San Cristóbal",
+    "latitud": -33.4246,
+    "longitud": -70.6346,
+    "icono": "ic_park",
+    "categoria": "Parque"
+  },
+  {
+    "nombre": "Parque Bicentenario",
+    "latitud": -33.40056,
+    "longitud": -70.60222,
+    "icono": "ic_park",
+    "categoria": "Parque"
+  },
+  {
+    "nombre": "Parque Forestal",
+    "latitud": -33.4349,
+    "longitud": -70.6416,
+    "icono": "ic_park",
+    "categoria": "Parque"
+  },
+  {
+    "nombre": "Museo de Bellas Artes",
+    "latitud": -33.4357,
+    "longitud": -70.6397,
+    "icono": "ic_museum",
+    "categoria": "Museo"
+  },
+  {
+    "nombre": "Museo Histórico Nacional",
+    "latitud": -33.4374,
+    "longitud": -70.6511,
+    "icono": "ic_museum",
+    "categoria": "Museo"
+  },
+  {
+    "nombre": "La Chascona (Casa Neruda)",
+    "latitud": -33.43116,
+    "longitud": -70.63448,
+    "icono": "ic_museum",
+    "categoria": "Cultura"
+  },
+  {
+    "nombre": "Centro Cultural GAM",
+    "latitud": -33.4395,
+    "longitud": -70.6398,
+    "icono": "ic_museum",
+    "categoria": "Cultura"
+  },
+  {
+    "nombre": "Costanera Center",
+    "latitud": -33.417,
+    "longitud": -70.6068,
+    "icono": "ic_mall",
+    "categoria": "Tienda"
+  },
+  {
+    "nombre": "Patio Bellavista",
+    "latitud": -33.43417,
+    "longitud": -70.63506,
+    "icono": "ic_mall",
+    "categoria": "Tienda"
+  },
+  {
+    "nombre": "Estadio Nacional",
+    "latitud": -33.4631,
+    "longitud": -70.6106,
+    "icono": "ic_stadium",
+    "categoria": "Deporte"
+  },
+  {
+    "nombre": "Estadio Monumental David Arellano",
+    "latitud": -33.50648,
+    "longitud": -70.60598,
+    "icono": "ic_stadium",
+    "categoria": "Deporte"
+  },
+  {
+    "nombre": "Estadio Bicentenario de La Florida",
+    "latitud": -33.5378,
+    "longitud": -70.5737,
+    "icono": "ic_stadium",
+    "categoria": "Deporte"
+  },
+  {
+    "nombre": "Estadio Santa Laura",
+    "latitud": -33.4027,
+    "longitud": -70.6554,
+    "icono": "ic_stadium",
+    "categoria": "Deporte"
+  },
+  {
+    "nombre": "Estadio San Carlos de Apoquindo",
+    "latitud": -33.3909,
+    "longitud": -70.5004,
+    "icono": "ic_stadium",
+    "categoria": "Deporte"
+  },
+  {
+    "nombre": "Fantasilandia",
+    "latitud": -33.4603,
+    "longitud": -70.6628,
+    "icono": "ic_atraccions",
+    "categoria": "Entretención"
+  },
+  {
+    "nombre": "Templo Bahá'í",
+    "latitud": -33.47222,
+    "longitud": -70.50917,
+    "icono": "ic_tourism",
+    "categoria": "Turismo"
+  },
+  {
+    "nombre": "Palacio de La Moneda",
+    "latitud": -33.443,
+    "longitud": -70.6533,
+    "icono": "ic_tourism",
+    "categoria": "Turismo"
+  }
+]

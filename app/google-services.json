@@ -8,41 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:326981270052:android:54bbd71d37911e4944f6b1",
-        "android_client_info": {
-          "package_name": "com.example.pruebaandroid2"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "326981270052-0pdi41snui6om3dhoot350k67nglg9v1.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB1cWbfg47Uuo_gXX59L22IowHJsks606k"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "326981270052-0pdi41snui6om3dhoot350k67nglg9v1.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:326981270052:android:a287a6ec8240ec9544f6b1",
         "android_client_info": {
           "package_name": "com.example.touristmap"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "326981270052-vijvkead1oa3emjtmcaaj4l56mdjabgq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.touristmap",
+            "certificate_hash": "7d1421fdcd288e9dd2f1d43fe6bb4c4c8c663efc"
+          }
+        },
         {
           "client_id": "326981270052-0pdi41snui6om3dhoot350k67nglg9v1.apps.googleusercontent.com",
           "client_type": 3

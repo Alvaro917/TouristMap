@@ -12,4 +12,6 @@
     <string name="cerrar_session">Cerrar Session</string>
     <string name="ir_al_mapa">Ir al Mapa</string>
     <string name="bienvenido">¡Bienvenido!</string>
+    <string name="google">Google</string>
+    <string name="default_web_client_id">326981270052-vijvkead1oa3emjtmcaaj4l56mdjabgq.apps.googleusercontent.com</string>
 </resources>
