@@ -15,11 +15,10 @@ import com.example.touristmap.auth.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class InfoFragment extends Fragment {
-
     private String email;
     private String provider;
 
-    public InfoFragment() {} // Constructor vacío necesario
+    public InfoFragment() {}
 
     public InfoFragment(String email, String provider) {
         this.email = email;
@@ -30,7 +29,6 @@ public class InfoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_info, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

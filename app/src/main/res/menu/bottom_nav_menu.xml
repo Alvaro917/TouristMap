@@ -9,4 +9,8 @@
         android:id="@+id/nav_map"
         android:icon="@drawable/ic_logo"
         android:title="@string/mapa" />
+    <item
+        android:id="@+id/nav_reviews"
+        android:icon="@drawable/ic_reviews"
+        android:title="Reseñas" />
 </menu>

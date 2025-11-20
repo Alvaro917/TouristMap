@@ -8,10 +8,8 @@ import com.example.touristmap.databinding.ActivityHomeBinding;
 import com.example.touristmap.map.MapFragment;
 
 public class HomeActivity extends AppCompatActivity {
-
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PROVIDER = "provider";
-
     private ActivityHomeBinding binding;
     private String email;
     private String provider;
@@ -21,21 +19,15 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        // Recuperar datos del Login
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             email = bundle.getString(KEY_EMAIL, "");
             provider = bundle.getString(KEY_PROVIDER, "");
         }
-
         setupNavigation();
     }
-
     private void setupNavigation() {
-        // Cargar InfoFragment por defecto al abrir
         loadFragment(new InfoFragment(email, provider));
-
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
             int itemId = item.getItemId();
@@ -44,8 +36,9 @@ public class HomeActivity extends AppCompatActivity {
                 fragment = new InfoFragment(email, provider);
             } else if (itemId == R.id.nav_map) {
                 fragment = new MapFragment();
+            } else if (itemId == R.id.nav_reviews) { // <--- NUEVO
+                fragment = new ReviewsFragment();
             }
-
             if (fragment != null) {
                 loadFragment(fragment);
                 return true;
@@ -53,7 +46,6 @@ public class HomeActivity extends AppCompatActivity {
             return false;
         });
     }
-
     private void loadFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()

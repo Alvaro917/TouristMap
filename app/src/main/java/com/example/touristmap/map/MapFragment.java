@@ -42,7 +42,6 @@ public class MapFragment extends Fragment {
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (isGranted) activarCapadeUbicacion();
             });
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Configuration.getInstance().load(requireContext(), PreferenceManager.getDefaultSharedPreferences(requireContext()));
@@ -60,7 +59,6 @@ public class MapFragment extends Fragment {
         mapView.setMultiTouchControls(true);
         mapView.getController().setZoom(14.0);
 
-        // Configuración del Spinner
         List<String> categorias = new ArrayList<>(Arrays.asList("Parque", "Tienda", "Museo", "Deporte", "Entretención", "Turismo"));
         categorias.add(0, "Todos");
 
@@ -79,14 +77,12 @@ public class MapFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // Verificar Permisos
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             activarCapadeUbicacion();
         } else {
             requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
         }
     }
-
     private void activarCapadeUbicacion() {
         if (getContext() == null) return;
         locationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(getContext()), mapView);
@@ -102,7 +98,6 @@ public class MapFragment extends Fragment {
             }
         });
     }
-
     private void filtrarMarcadores(String categoria) {
         List<Marker> markersToRemove = new ArrayList<>();
         for (org.osmdroid.views.overlay.Overlay overlay : mapView.getOverlays()) {
@@ -116,7 +111,6 @@ public class MapFragment extends Fragment {
                 if (lugar.getCategoria().equals(categoria)) lugaresMostrar.add(lugar);
             }
         }
-
         for (Lugar lugar : lugaresMostrar) {
             Marker marker = new Marker(mapView);
             marker.setPosition(new GeoPoint(lugar.getLatitud(), lugar.getLongitud()));
@@ -127,7 +121,6 @@ public class MapFragment extends Fragment {
         }
         mapView.invalidate();
     }
-
     private List<Lugar> lugaresJSON() {
         List<Lugar> lugares = new ArrayList<>();
         try {
@@ -152,7 +145,6 @@ public class MapFragment extends Fragment {
         } catch (Exception e) { e.printStackTrace(); }
         return lugares;
     }
-
     private int getIconoId(String nombre) {
         switch (nombre) {
             case "ic_park": return R.drawable.ic_park;
@@ -164,13 +156,11 @@ public class MapFragment extends Fragment {
             default: return R.drawable.ic_park;
         }
     }
-
     @Override
     public void onResume() {
         super.onResume();
         if (mapView != null) mapView.onResume();
     }
-
     @Override
     public void onPause() {
         super.onPause();
